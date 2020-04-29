@@ -4,8 +4,8 @@ FROM lsiobase/nginx:3.10
 ARG BUILD_DATE
 ARG VERSION
 ARG RUTORRENT_RELEASE
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="alex-phillips"
+LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="Andy]"
 
 # copy patches
 COPY patches/ /defaults/patches/
@@ -64,7 +64,7 @@ RUN \
 	/defaults/rutorrent-conf/users && \
  echo "**** patch snoopy.inc for rss fix ****" && \
  cd /app/rutorrent/php && \
- patch < /defaults/patches/snoopy.patch && \
+ #patch < /defaults/patches/snoopy.patch && \
  echo "**** cleanup ****" && \
  apk del --purge \
 	build-dependencies && \
