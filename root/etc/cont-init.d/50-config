@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 # make folders
-mkdir -p \
+s6-setuidgid abc mkdir -p \
 	/config{/log/rtorrent,/log/rutorrent,/rtorrent/rtorrent_sess,/rutorrent/settings/users} \
 	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
 	/downloads{/complete,/download,/watch} \
