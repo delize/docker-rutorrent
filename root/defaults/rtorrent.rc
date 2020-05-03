@@ -1,8 +1,8 @@
-execute2 = {sh,-c,/usr/bin/php7 /app/rutorrent/php/initplugins.php abc &}
+execute2 = {sh,-c,/usr/bin/php7 /app/rutorrent/php/initplugins.php 1000 &}
 execute.nothrow = rm,/run/php/.rtorrent.sock
 network.scgi.open_local = /run/php/.rtorrent.sock
 schedule = socket_chmod,0,0,"execute=chmod,0660,/run/php/.rtorrent.sock"
-schedule = socket_chgrp,0,0,"execute=chgrp,abc,/run/php/.rtorrent.sock"
+schedule = socket_chgrp,0,0,"execute=chgrp,1000,/run/php/.rtorrent.sock"
 log.open_file = "rtorrent", /config/log/rtorrent/rtorrent.log
 log.add_output = "info", "rtorrent"
 min_peers = 40

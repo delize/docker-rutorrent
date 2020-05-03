@@ -5,7 +5,7 @@ ARG BUILD_DATE
 ARG VERSION
 ARG RUTORRENT_RELEASE
 LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="Andy]"
+LABEL maintainer="Andy"
 
 # copy patches
 COPY patches/ /defaults/patches/

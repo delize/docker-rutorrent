@@ -34,14 +34,14 @@ cp -pr /config/rutorrent/settings/* /app/rutorrent/conf/
 	rm /config/rtorrent/rtorrent_sess/rtorrent.lock
 
 # permissions
-chown abc:abc \
+chown 1000:1000 \
 	/downloads \
 	/downloads{/complete,/download,/watch} \
 	/downloads/watch{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish} \
 	/downloads/complete{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish} \
 	/downloads/download{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish}
 
-chown -R abc:abc \
+chown -R 1000:1000 \
 	/config \
 	/run \
 	/app/rutorrent
