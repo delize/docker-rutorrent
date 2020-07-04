@@ -1,7 +1,8 @@
 #!/usr/bin/with-contenv bash
 
 # make folders
-s6-setuidgid abc mkdir -p \
+# add below if for whatever reason it is not possibe to create: s6-setuidgid abc 
+mkdir -p \
 	/config{/log/rtorrent,/log/rutorrent,/rtorrent/rtorrent_sess,/rutorrent/settings/users} \
 	/config/rutorrent/profiles{/settings,/torrents,/users,/tmp} \
 	/downloads{/complete,/download,/watch} \
@@ -34,14 +35,14 @@ cp -pr /config/rutorrent/settings/* /app/rutorrent/conf/
 	rm /config/rtorrent/rtorrent_sess/rtorrent.lock
 
 # permissions
-chown 1000:1000 \
+chown abc:abc \
 	/downloads \
 	/downloads{/complete,/download,/watch} \
 	/downloads/watch{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish} \
 	/downloads/complete{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish} \
 	/downloads/download{/book,/game,/movie/radarr,/movie/radarr-swedish,/music,/other,/software,/tv/sonarr,/tv/sonarr-swedish}
 
-chown -R 1000:1000 \
+chown -R abc:abc \
 	/config \
 	/run \
 	/app/rutorrent
